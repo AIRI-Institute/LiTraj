@@ -33,7 +33,7 @@ def available_datasets():
 
 
 
-def download_dataset(dataset_name, folder, unzip = True):
+def download_dataset(dataset_name, folder, unzip = True, remove_zip = False):
     """
     Download a specified dataset
 
@@ -48,6 +48,9 @@ def download_dataset(dataset_name, folder, unzip = True):
 
     unzip: boolean, True by default
         unzip donwloaded .zip
+    
+    remove_zip: boolean, False by default
+        delete .zip file
     
     Examples
     --------
@@ -74,6 +77,11 @@ def download_dataset(dataset_name, folder, unzip = True):
                 print(f'Folder {pth} already exists')
             else:
                 _unzip(pth, folder)
+        if remove_zip:
+            if os.path.exists(f'{pth}.zip'):
+                os.remove(f'{pth}.zip')
+                print(f"{pth}.zip has been deleted.")
+                
 
     except KeyboardInterrupt:
         print('\nDownload interrupted by user. Cleaning up...')

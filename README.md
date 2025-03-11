@@ -42,8 +42,8 @@ We provide training, validation, and test data splits for each dataset. See the 
     <td><a href="#nebdft2k-dataset">nebDFT2k</a></td>
     <td>DFT(PBE)</td>
     <td>target: migration barrier, geometry <br/> # of samples: 1,681</td>
-    <td><a href="https://bs3u.obs.ru-moscow-1.hc.sbercloud.ru/litraj/nebDFT2k.zip">zip</a></td>
-    <td>65 MB</td>
+    <td><a href="https://bs3u.obs.ru-moscow-1.hc.sbercloud.ru/litraj/nebDFT2k.zip">zip</a> (65 MB)</td>
+    <td>0.7 GB</td>
   </tr>
   <tr>
     <td><a href="#nebdft2k-dataset">nebDFT2k_U</a></td>
@@ -56,29 +56,29 @@ We provide training, validation, and test data splits for each dataset. See the 
     <td><a href="#mplitrj-dataset">MPLiTrj</a></td>
     <td>DFT(PBE)</td>
     <td>target: energy, forces, stress tensor <br/> # of samples: 929,066</td>
-    <td><a href="https://bs3u.obs.ru-moscow-1.hc.sbercloud.ru/litraj/MPLiTrj.zip">zip</a></td>
-    <td>3.8 GB</td>
+    <td><a href="https://bs3u.obs.ru-moscow-1.hc.sbercloud.ru/litraj/MPLiTrj.zip">zip</a> (3.8 GB)</td>
+    <td>16 GB</td>
   </tr>
   <tr>
     <td><a href="#mplitrj-dataset">MPLiTrj_subsample</a></td>
     <td>DFT(PBE)</td>
     <td>target: energy, forces, stress tensor <br/> # of samples: 118,024</td>
-    <td><a href="https://bs3u.obs.ru-moscow-1.hc.sbercloud.ru/litraj/MPLiTrj_subsample.zip">zip</a></td>
-    <td>0.5 GB</td>
+    <td><a href="https://bs3u.obs.ru-moscow-1.hc.sbercloud.ru/litraj/MPLiTrj_subsample.zip">zip</a> (0.5 GB)</td>
+    <td>2.1 GB</td>
   </tr>
   <tr>
     <td><a href="#bvel13k-dataset">BVEL13k</a></td>
     <td>BVSE</td>
     <td>target: 1-3D percolation barrier <br/> # of samples: 12,807</td>
-    <td><a href="https://bs3u.obs.ru-moscow-1.hc.sbercloud.ru/litraj/BVEL13k.zip">zip</a></td>
-    <td>11 MB</td>
+    <td><a href="https://bs3u.obs.ru-moscow-1.hc.sbercloud.ru/litraj/BVEL13k.zip">zip</a> (11 MB)</td>
+    <td>35 MB</td>
   </tr>
   <tr>
     <td><a href="#nebbvse122k-dataset">nebBVSE122k</a></td>
     <td>BVSE</td>
     <td>target: migration barrier <br/> # of samples: 122,421</td>
-    <td><a href="https://bs3u.obs.ru-moscow-1.hc.sbercloud.ru/litraj/nebBVSE122k.zip">zip</a></td>
-    <td>0.2 GB</td>
+    <td><a href="https://bs3u.obs.ru-moscow-1.hc.sbercloud.ru/litraj/nebBVSE122k.zip">zip</a> (0.2 GB)</td>
+    <td>0.9 GB</td>
   </tr>
 </table>
 
@@ -94,13 +94,13 @@ pip install .
 ### Download a specific dataset
 ```python
 from litraj.data import download_dataset
-download_dataset('BVEL13k', folder = '.') # save to the current directory
+download_dataset('BVEL13k', '.', unzip = True) # save to the current directory and unzip
 ```
 
 ### Read the downloaded dataset 
 ```python
 from litraj.data import load_data
-train, val, text, index = load_data('BVEL13k', folder = '.')
+train, val, text, index = load_data('BVEL13k', '.')
 
 for atoms in train:
     mp_id =  atoms.info['material_id']

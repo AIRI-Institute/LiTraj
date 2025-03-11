@@ -4,7 +4,7 @@
 
 ```python
 from litraj.data import download_dataset
-download_dataset('dataset_name', 'folder')
+download_dataset('dataset_name', 'folder', unzip = True, remove_zip = True)
 ```
 
 
@@ -13,7 +13,7 @@ download_dataset('dataset_name', 'folder')
 
 ```python
 from litraj.data import download_dataset
-index = load_data('nebDFT2k', 'folder')
+index = load_data('dataset_name', 'folder')
 ```
 
 #### Structure of the nebDFT2k dataset
