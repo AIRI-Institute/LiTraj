@@ -1,0 +1,157 @@
+BesselBasis_trainable: true
+PolynomialCutoff_p: 6
+append: false
+ase_args:
+  format: extxyz
+avg_num_neighbors: auto
+batch_size: 16
+chemical_symbol_to_type:
+  Ag: 0
+  Al: 1
+  As: 2
+  B: 3
+  Ba: 4
+  Be: 5
+  Bi: 6
+  Br: 7
+  C: 8
+  Ca: 9
+  Cd: 10
+  Ce: 11
+  Cl: 12
+  Co: 13
+  Cr: 14
+  Cs: 15
+  Cu: 16
+  Dy: 17
+  Er: 18
+  Eu: 19
+  F: 20
+  Fe: 21
+  Ga: 22
+  Gd: 23
+  Ge: 24
+  Hf: 25
+  Hg: 26
+  Ho: 27
+  I: 28
+  In: 29
+  Ir: 30
+  K: 31
+  La: 32
+  Li: 33
+  Lu: 34
+  Mg: 35
+  Mn: 36
+  Mo: 37
+  N: 38
+  Na: 39
+  Nb: 40
+  Nd: 41
+  Ni: 42
+  O: 43
+  P: 44
+  Pb: 45
+  Pd: 46
+  Pr: 47
+  Rb: 48
+  Re: 49
+  Rh: 50
+  Ru: 51
+  S: 52
+  Sb: 53
+  Sc: 54
+  Se: 55
+  Si: 56
+  Sm: 57
+  Sn: 58
+  Sr: 59
+  Ta: 60
+  Tb: 61
+  Te: 62
+  Th: 63
+  Ti: 64
+  Tl: 65
+  Tm: 66
+  U: 67
+  V: 68
+  W: 69
+  Y: 70
+  Zn: 71
+  Zr: 72
+  X: 73
+dataset: ase
+dataset_file_name: pth/to/train/data
+dataset_seed: 123456
+default_dtype: float32
+early_stopping_delta:
+  validation_loss: 0.0001
+early_stopping_lower_bounds:
+  LR: 0.0001
+early_stopping_patiences:
+  validation_loss: 20
+early_stopping_upper_bounds:
+  cumulative_wall: 604800.0
+edge_eng_mlp_initialization: uniform
+edge_eng_mlp_latent_dimensions:
+- 128
+edge_eng_mlp_nonlinearity: null
+ema_decay: 0.99
+ema_use_num_updates: true
+embed_initial_edge: true
+env_embed_mlp_initialization: uniform
+env_embed_mlp_latent_dimensions: []
+env_embed_mlp_nonlinearity: null
+env_embed_multiplicity: 32
+key_mapping:
+  E_3D_x_nsites: total_energy
+l_max: 2
+latent_mlp_initialization: uniform
+latent_mlp_latent_dimensions:
+- 512
+latent_mlp_nonlinearity: silu
+latent_resnet: true
+learning_rate: 0.005
+loss_coeffs: total_energy
+lr_scheduler_factor: 0.5
+lr_scheduler_name: ReduceLROnPlateau
+lr_scheduler_patience: 20
+lr_scheduler_threshold: 0.0001
+max_epochs: 1000
+metrics_key: validation_loss
+model_builders:
+- allegro.model.Allegro
+- PerSpeciesRescale
+- RescaleEnergyEtc
+n_train: 10159
+n_val: 1331
+num_layers: 4
+optimizer_name: Adam
+optimizer_params:
+  amsgrad: false
+  betas: !!python/tuple
+  - 0.9
+  - 0.999
+  eps: 1.0e-08
+  weight_decay: 0.0
+parity: o3_full
+r_max: 7.0
+root: ./
+run_name: allegro_BVEL13k_e3d_rmax_7_lr_005_reproduce
+seed: 123456
+shuffle: true
+train_val_split: sequential
+two_body_latent_mlp_initialization: uniform
+two_body_latent_mlp_latent_dimensions:
+- 64
+- 128
+- 256
+- 512
+two_body_latent_mlp_nonlinearity: silu
+use_ema: true
+validation_dataset: ase
+validation_dataset_file_name: pth/to/val/data
+verbose: debug
+wandb: true
+wandb_entity: your_wandb_entity
+wandb_project: your_wandb_project

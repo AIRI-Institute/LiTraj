@@ -1,0 +1,142 @@
+BesselBasis_trainable: true
+PolynomialCutoff_p: 6
+append: false
+ase_args:
+  format: extxyz
+avg_num_neighbors: auto
+batch_size: 4
+chemical_symbol_to_type:
+  Ag: 0
+  Al: 1
+  As: 2
+  B: 3
+  Ba: 4
+  Be: 5
+  Bi: 6
+  Br: 7
+  C: 8
+  Ca: 9
+  Cd: 10
+  Ce: 11
+  Cl: 12
+  Co: 13
+  Cr: 14
+  Cs: 15
+  Cu: 16
+  Dy: 17
+  Er: 18
+  Eu: 19
+  F: 20
+  Fe: 21
+  Ga: 22
+  Gd: 23
+  Ge: 24
+  Hf: 25
+  Hg: 26
+  Ho: 27
+  I: 28
+  In: 29
+  Ir: 30
+  K: 31
+  La: 32
+  Li: 33
+  Lu: 34
+  Mg: 35
+  Mn: 36
+  Mo: 37
+  N: 38
+  Na: 39
+  Nb: 40
+  Nd: 41
+  Ni: 42
+  O: 43
+  P: 44
+  Pb: 45
+  Pd: 46
+  Pr: 47
+  Rb: 48
+  Re: 49
+  Rh: 50
+  Ru: 51
+  S: 52
+  Sb: 53
+  Sc: 54
+  Se: 55
+  Si: 56
+  Sm: 57
+  Sn: 58
+  Sr: 59
+  Ta: 60
+  Tb: 61
+  Te: 62
+  Th: 63
+  Ti: 64
+  Tl: 65
+  Tm: 66
+  U: 67
+  V: 68
+  W: 69
+  Y: 70
+  Zn: 71
+  Zr: 72
+  X: 73
+dataset: ase
+dataset_file_name: path/to/train/data
+dataset_seed: 123456
+default_dtype: float32
+early_stopping_lower_bounds:
+  LR: 0.0001
+invariant_layers: 2
+invariant_neurons: 64
+key_mapping:
+  em_x_nsites: total_energy
+l_max: 2
+latent_resnet: true
+learning_rate: 0.005
+loss_coeffs: total_energy
+lr_scheduler_factor: 0.5
+lr_scheduler_name: ReduceLROnPlateau
+lr_scheduler_patience: 20
+lr_scheduler_threshold: 0.0001
+max_epochs: 10000
+metrics_key: validation_loss
+model_builders:
+- SimpleIrrepsConfig
+- EnergyModel
+- PerSpeciesRescale
+- RescaleEnergyEtc
+n_train: 96849
+n_val: 12405
+nonlinearity_gates:
+  e: silu
+  o: tanh
+nonlinearity_scalars:
+  e: silu
+  o: tanh
+nonlinearity_type: gate
+num_basis: 8
+num_features: 32
+num_layers: 4
+optimizer_name: Adam
+optimizer_params:
+  amsgrad: false
+  betas: !!python/tuple
+  - 0.9
+  - 0.999
+  eps: 1.0e-08
+  weight_decay: 0.0
+parity: true
+r_max: 6.0
+root: ./
+run_name: nequip_nebBVSE122k_rmax_6_lr005_reproduce
+seed: 123456
+shuffle: true
+train_val_split: sequential
+use_ema: true
+use_sc: true
+validation_dataset: ase
+validation_dataset_file_name: path/to/val/data
+verbose: debug
+wandb: true
+wandb_entity: your_entity
+wandb_project: your_project

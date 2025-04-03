@@ -3,7 +3,11 @@
 ### LiTraj: A Dataset for Benchmarking Machine Learning Models for Predicting Lithium Ion Migration
 
 <p align="left">
-<a href="https://github.com/dembart/LiTraj/blob/main/LICENSE"><img alt="License" src="https://img.shields.io/badge/license-MIT-darkred"></a>
+<a href="https://github.com/AIRI-Institute/LiTraj/blob/main/LICENSE"><img alt="License" src="https://img.shields.io/badge/license-MIT-darkred"></a>
+
+
+
+This repository contains links to datasets for benchmarking machine learning models for predicting Li-ion migration, as described in our [paper](), along with Python utilities for handling the datasets.
 
 
 ## Contents
@@ -22,9 +26,10 @@
 
 ## About
 
-This repository contains links to datasets for benchmarking machine learning models for predicting Li-ion migration, as described in our [paper](), along with Python utilities for handling the datasets.
+Modern electrochemical devices like Li-ion batteries require materials with fast ion transport. While traditional quantum chemistry methods for predicting ion mobility are computationally intensive, machine learning offers a faster alternative but depends on high-quality data. We introduce the LiTraj dataset, which provides 13,000 percolation barriers, 122,000 migration barriers, and 1,700 migration trajectories — key metrics for evaluating Li-ion mobility in crystals.
 
 The datasets are calculated using density functional theory (DFT) and bond valence site energy (BVSE) methods. For the calculations, we used crystal structures collected from [the Materials Project database](https://next-gen.materialsproject.org/) (see [license](https://creativecommons.org/licenses/by/4.0/)). The data is stored in the extended .xyz format, which can be read by the [Atomistic Simulation Environment](https://wiki.fysik.dtu.dk/ase/) (ASE) Python library.
+
 
 ## Available datasets and source links
 
@@ -121,7 +126,7 @@ For more details see [Datasets basics](notebooks/datasets.ipynb) in the [noteboo
 The nebDFT2k dataset includes Li-ion migration trajectories and corresponding **migration barriers** for 1,681 vacancy hops between initial and final equilibrium sites. The trajectories are optimized using the climbing image nudged elastic band (NEB) method with DFT for force and energy calculations. Initial trajectories were generated via linear interpolation between start and end positions, followed by preconditioning using the BVSE-NEB method from the [ions](https://github.com/dembart/ions) library.
 
 
-For benchmarking universal machine learning interatomic potentials (uMLIPs), the BVSE-NEB optimized initial trajectories serve as the starting point for uMLIP-NEB optimization. The resulting trajectories are compared to the DFT ground truth. See an [example](notebooks/nebDFT2k_benchmark_MACE_MP_small.ipynb) to to learn how to benchmark the pre-trained [MACE_MP](https://github.com/ACEsuit/mace-mp) model.
+For benchmarking universal machine learning interatomic potentials (uMLIPs), the BVSE-NEB optimized initial trajectories serve as the starting point for uMLIP-NEB optimization. The resulting trajectories are compared to the DFT ground truth. See an [example](notebooks/nebDFT2k_benchmark_MACE_MP_small.ipynb) to learn how to benchmark the pre-trained [MACE_MP](https://github.com/ACEsuit/mace-mp) model.
 
 
 As an input for graph neural network (GNN) models for structure-to-property prediction of Li-ion migration barriers, we use the supercells with a centroid, marked as 'X' chemical element, added between the starting and final positions of the migrating ion. 
@@ -265,7 +270,8 @@ for atoms_with_centroid in atoms_list_train:
 ### Notebooks
 
 - [Datasets basics](notebooks/datasets.ipynb)
-- [Benchmarking uMLIPs](notebooks/nebDFT2k_benchmark_MACE_MP_small.ipynb)
+- [Benchmarking uMLIPs on nebDFT2k](notebooks/nebDFT2k_benchmark_MACE_MP_small.ipynb)
+- [Allegro training on BVEL13k](notebooks/allegro_BVEL13k.ipynb)
 - [BVEL calculations](notebooks/bvel.ipynb)
 - [BVSE-NEB calculations](notebooks/bvse_neb.ipynb)
 - [Featurizers](notebooks/featurizers.ipynb)

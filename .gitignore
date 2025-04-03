@@ -1,9 +1,7 @@
 
 paper_figures.ipynb
-load_data.ipynb
 
 litraj/__pycache__/*
-configs
 
 scripts
 litraj/data/*
