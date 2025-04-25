@@ -7,7 +7,8 @@
 
 
 
-This repository contains links to datasets for benchmarking machine learning models for predicting Li-ion migration, as described in our [paper](), along with Python utilities for handling the datasets.
+
+This repository contains links to datasets for benchmarking machine learning models for predicting Li-ion migration, as described in our paper "Benchmarking machine learning models for predicting lithium ion migration", along with Python utilities for handling the datasets.
 
 
 ## Contents
@@ -271,6 +272,7 @@ for atoms_with_centroid in atoms_list_train:
 
 - [Datasets basics](notebooks/datasets.ipynb)
 - [Benchmarking uMLIPs on nebDFT2k](notebooks/nebDFT2k_benchmark_MACE_MP_small.ipynb)
+- [M3GNet training on centroids from nebDFT2k](notebooks/m3gnet_nebDFT2k_centroids.ipynb)
 - [Allegro training on BVEL13k](notebooks/allegro_BVEL13k.ipynb)
 - [BVEL calculations](notebooks/bvel.ipynb)
 - [BVSE-NEB calculations](notebooks/bvse_neb.ipynb)

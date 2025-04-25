@@ -3,7 +3,6 @@ paper_figures.ipynb
 
 litraj/__pycache__/*
 
-scripts
 litraj/data/*
 litraj/__pycache__
 !litraj/data/README.md
