@@ -8,7 +8,7 @@
 
 
 
-This repository contains links to datasets for benchmarking machine learning models for predicting Li-ion migration, as described in our paper "Benchmarking machine learning models for predicting lithium ion migration", along with Python utilities for handling the datasets.
+This repository contains links to datasets for benchmarking machine learning models for predicting Li-ion migration, as described in our paper ["Benchmarking machine learning models for predicting lithium ion migration"](https://www.nature.com/articles/s41524-025-01571-z), along with Python utilities for handling the datasets.
 
 
 ## Contents
@@ -282,14 +282,16 @@ for atoms_with_centroid in atoms_list_train:
 
 ### How to cite
 If you use the LiTraj dataset, please, consider citing our paper 
+
 ```
-@article{none,
-      title={none}, 
-      author={none},
-      year={2025},
-      eprint={none},
-      archivePrefix={none},
-      primaryClass={none},
-      url={none}, 
+@article{dembitskiy2025benchmarking,
+	title = {{Benchmarking machine learning models for predicting lithium ion migration}},
+	author = {Dembitskiy, Artem D. and Humonen, Innokentiy S. and Eremin, Roman A. and Aksyonov, Dmitry A. and Fedotov, Stanislav S. and Budennyy, Semen A.},
+	journal = {npj Comput. Mater.},
+	volume = {11},
+	number = {131},
+	year = {2025},
+	publisher = {Nature Publishing Group},
+	doi = {10.1038/s41524-025-01571-z}
 }
 ```
