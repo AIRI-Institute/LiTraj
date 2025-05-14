@@ -22,7 +22,6 @@ def available_datasets():
 
     datasets = {
         "BVEL13k": 'https://bs3u.obs.ru-moscow-1.hc.sbercloud.ru/litraj/BVEL13k.zip',
-        "MPLiTrj": 'https://bs3u.obs.ru-moscow-1.hc.sbercloud.ru/litraj/MPLiTrj.zip',
         "nebDFT2k": 'https://bs3u.obs.ru-moscow-1.hc.sbercloud.ru/litraj/nebDFT2k.zip',
         "nebBVSE122k": 'https://bs3u.obs.ru-moscow-1.hc.sbercloud.ru/litraj/nebBVSE122k.zip',
         "MPLiTrj_subsample": 'https://bs3u.obs.ru-moscow-1.hc.sbercloud.ru/litraj/MPLiTrj_subsample.zip',
