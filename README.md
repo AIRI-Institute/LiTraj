@@ -92,6 +92,12 @@ We provide training, validation, and test data splits for each dataset. See the 
 ## Python tools
 ### Installation
 
+```
+pip install litraj
+```
+
+or
+
 ```python
 git clone https://github.com/AIRI-Institute/LiTraj
 cd LiTraj
