@@ -1,4 +1,4 @@
-![toc](figures/toc.png)
+![toc](https://github.com/AIRI-Institute/LiTraj/raw/main/figures/toc.png)
 
 ### LiTraj: A Dataset for Benchmarking Machine Learning Models for Predicting Lithium Ion Migration
 
@@ -128,7 +128,7 @@ For more details see [Datasets basics](notebooks/datasets.ipynb) in the [noteboo
 ## Datasets in detail
 ### nebDFT2k dataset
 
-![benchmark](figures/benchmark.png)
+![benchmark](https://github.com/AIRI-Institute/LiTraj/raw/main/figures/benchmark.png)
 
 The nebDFT2k dataset includes Li-ion migration trajectories and corresponding **migration barriers** for 1,681 vacancy hops between initial and final equilibrium sites. The trajectories are optimized using the climbing image nudged elastic band (NEB) method with DFT for force and energy calculations. Initial trajectories were generated via linear interpolation between start and end positions, followed by preconditioning using the BVSE-NEB method from the [ions](https://github.com/dembart/ions) library.
 
@@ -205,7 +205,7 @@ for atoms in train:
 
 ### BVEL13k dataset
 
-![BVEL13k_stats_figure](figures/bvel.png)
+![BVEL13k_stats_figure](https://github.com/AIRI-Institute/LiTraj/raw/main/figures/bvel.png)
 
 
 The BVEL13k dataset contains Li-ion 1-3D percolation barriers calculated for 12,807 Li-containing ionic crystal structures. The percolation barriers are calculated using BVEL method as implemented in the [BVlain](https://github.com/dembart/BVlain) python package. There are 73 chemical elements (species), each structure contains at most 160 atoms and has a unit cell volume smaller than 1500 Å<sup>3</sup>. 
@@ -241,7 +241,7 @@ for atoms in atoms_list_train:
 ```
 
 ### nebBVSE122k dataset
-![nebBVSE_stats_figure](figures/bvse.png)
+![nebBVSE_stats_figure](https://github.com/AIRI-Institute/LiTraj/raw/main/figures/bvse.png)
 The nebBVSE122k dataset contains Li-ion migration barriers calculated for 122,421 Li-ion vacancy hops from its starting to final equilibrium positions. The migration barriers are calculated using the NEB method employing BVSE approach as implemented in the [ions](https://github.com/dembart/ions) python package. 
 
 As an input for GNN models for structure-to-property prediction, we use the supercells with a centroid, marked as 'X' chemical element, added between the starting and final positions of the migrating ion. 
